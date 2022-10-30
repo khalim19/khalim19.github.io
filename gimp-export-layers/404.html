@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <!-- Theme taken from the GitHub 404 page -->
+<!-- Redirection code taken from here: https://gist.github.com/domenic/1f286d415559b56d725bee51a62c24a7 -->
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
-    <meta http-equiv="refresh" content="0; URL=https://kamilburda.github.io/gimp-export-layers/">
-    <link rel="canonical" href="https://kamilburda.github.io/gimp-export-layers/">
+    
+    <noscript>
+      <meta http-equiv="refresh" content="0; URL=https://kamilburda.github.io/gimp-export-layers/">
+      <link rel="canonical" href="https://kamilburda.github.io/gimp-export-layers/">
+    </noscript>
+    
     <title>Export Layers</title>
+    
     <style type="text/css" media="screen">
       body {
         background-color: #ffffff;
@@ -34,10 +40,26 @@
       }
 
     </style>
+    
+    <script>
+      window.onload = function () {
+          const destination = window.location.href;
+          if (window.location.href.includes("khalim19.github.io/gimp-export-layers")) {
+              const redirectLocation = window.location.href.replace(
+                  "khalim19.github.io/gimp-export-layers",
+                  "kamilburda.github.io/gimp-export-layers"
+              );
+              document.getElementById("body").innerHTML = "<div class=\"container\"><p><strong>Redirecting to a <a href=\"" + redirectLocation + "\">new site</a> in the blink of an eye...</strong></p></div>";
+              window.location.href = redirectLocation;
+          }
+      }
+    </script>
   </head>
   <body>
-    <div class="container">
-      <p><strong>Redirecting to a <a href="https://kamilburda.github.io/gimp-export-layers/">new site</a> in the blink of an eye...</strong></p>
-    </div>
+    <noscript>
+      <div class="container">
+        <p><strong>Redirecting to a <a href="https://kamilburda.github.io/gimp-export-layers/">new site</a> in the blink of an eye...</strong></p>
+      </div>
+    </noscript>
   </body>
 </html>
