@@ -44,13 +44,23 @@
     <script>
       window.onload = function () {
           const destination = window.location.href;
+          
           if (window.location.href.includes("khalim19.github.io/gimp-plugin-export-layers")) {
-              const redirectLocation = window.location.href.replace(
+              destination = window.location.href.replace(
                   "khalim19.github.io/gimp-plugin-export-layers",
                   "kamilburda.github.io/gimp-export-layers"
               );
-              document.getElementById("body").innerHTML = "<div class=\"container\"><p><strong>Redirecting to a <a href=\"" + redirectLocation + "\">new site</a> in the blink of an eye...</strong></p></div>";
-              window.location.href = redirectLocation;
+          }
+          else if (window.location.href.includes("khalim19.github.io/gimp-export-layers")) {
+              destination = window.location.href.replace(
+                  "khalim19.github.io/gimp-export-layers",
+                  "kamilburda.github.io/gimp-export-layers"
+              );
+          }
+          
+          if (destination != window.location.href) {
+              document.getElementById("body").innerHTML = "<div class=\"container\"><p><strong>Redirecting to a <a href=\"" + destination + "\">new site</a> in the blink of an eye...</strong></p></div>";
+              window.location.href = destination;
           }
       }
     </script>
