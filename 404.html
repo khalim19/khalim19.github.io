@@ -58,7 +58,7 @@
           }
           
           if (destination != window.location.href) {
-              document.getElementById("body").innerHTML = "<div class=\"container\"><p><strong>Redirecting to a <a href=\"" + destination + "\">new site</a> in the blink of an eye...</strong></p></div>";
+              document.body.innerHTML = document.body.innerHTML.replace("<noscript>", "").replace("</noscript>", "")
               window.location.href = destination;
           }
       }
