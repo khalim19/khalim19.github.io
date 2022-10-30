@@ -42,7 +42,7 @@
     
     <script>
       window.onload = function () {
-          let destination = window.location.href;
+          let destination = "https://kamilburda.github.io/gimp-export-layers/";
           
           if (window.location.href.includes("khalim19.github.io/gimp-plugin-export-layers")) {
               destination = window.location.href.replace(
@@ -57,10 +57,8 @@
               );
           }
           
-          if (destination != window.location.href) {
-              document.body.innerHTML = document.body.innerHTML.replace("<noscript>", "").replace("</noscript>", "")
-              window.location.href = destination;
-          }
+          document.body.innerHTML = document.body.innerHTML.replace("<noscript>", "").replace("</noscript>", "")
+          window.location.href = destination;
       }
     </script>
   </head>
